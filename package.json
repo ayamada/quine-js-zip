@@ -1,0 +1,24 @@
+{
+  "name": "quine-js-zip",
+  "version": "0.0.0-SNAPSHOT",
+  "private" : true,
+  "description": "",
+  "homepage": "https://github.com/ayamada/quine-js-zip",
+  "author": "ayamada",
+  "scripts": {
+    "update": "cp node_modules/jszip/dist/jszip.min.js html",
+    "clean": "rimraf html/filelist.txt",
+    "distclean": "npm run clean && rimraf package-lock.json node_modules",
+    "bootstrap": "http-server -a 127.0.0.1 html -p 8001"
+  },
+  "dependencies": {
+    "jszip": "3.10.1"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1",
+    "cp": "0.2.0",
+    "mkdirp": "3.0.1",
+    "rimraf": "5.0.0"
+  },
+  "license": "MIT"
+}
